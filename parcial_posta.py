@@ -128,13 +128,12 @@ def quien_gano_el_tateti_facilito(tablero : list[list[chr]])-> int:
     gano_o = False
 
     lista_columna_temp : list[chr] = []
-    for k in range(len(tablero)):
+    for i in range(len(tablero)):
         lista_columna_temp.clear()
-
-        for i in range(len(tablero)):
-            lista_columna_temp.clear()
-            for j in range(len(tablero)):
-                lista_columna_temp.append(tablero[j][i])
+        
+        for j in range(len(tablero)):
+               
+            lista_columna_temp.append(tablero[j][i])
        
         
         if esta_incluido_estricto(['X','X','X'], lista_columna_temp):
@@ -159,7 +158,7 @@ def quien_gano_el_tateti_facilito(tablero : list[list[chr]])-> int:
 
 tablero = [
     ['','','','',''],
-    ['','','X','O',''],
+    ['','','','O',''],
     ['','','X','O',''],
     ['','','X','O',''],
     ['','','','','']
